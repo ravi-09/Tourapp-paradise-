@@ -63,9 +63,9 @@ app.use(cookieParser());
 
 
 app.get("/", (req, res) => {
-    res.render('login');
+    res.render('index');
 });
-app.post("/", async(req, res) => {
+app.post("/login", async(req, res) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
@@ -176,11 +176,11 @@ app.post("/reset", async(req, res) => {
 
 });
 
-app.get("/home", auth, async(req, res) => {
+app.get("/login", auth, async(req, res) => {
 
     username = req.user.name;
 
-    res.render("index", { name: username });
+    res.render("login", { name: username });
 });
 
 
