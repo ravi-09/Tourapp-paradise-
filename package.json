@@ -26,6 +26,7 @@
     "hbs": "^4.1.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.5",
+    "stripe": "^8.145.0",
     "validator": "^13.6.0"
   }
 }

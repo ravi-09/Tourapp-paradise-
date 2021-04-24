@@ -62,10 +62,10 @@ app.use(cookieParser());
 
 
 
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
     res.render('login');
 });
-app.post("/", async(req, res) => {
+app.post("/login", async(req, res) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
