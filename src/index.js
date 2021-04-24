@@ -36,7 +36,7 @@ const wayanadlake = require("./models/wayanad/fake");
 const wayanadtemple = require("./models/wayanad/templee");
 const wayanadwaterfalls = require("./models/wayanad/kant");
 const path = require("path");
-const request = require("requests");
+
 const bcrypt = require("bcryptjs");
 const hbs = require('hbs');
 const bodyParser = require("body-parser");
@@ -50,19 +50,18 @@ const cookieParser = require("cookie-parser");
 
 
 const StaticPath = path.join(__dirname, "../public");
-//views path
+
 const template_path = path.join(__dirname, "../templates/views");
 app.set("view engine", 'hbs');
 app.use(express.static(StaticPath));
 app.set('views', template_path);
-//hbs.registerPartials(partialsPath, function(err) {});
-//console.log(partials_path);
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 
 
-//routing
+
 app.get("/", (req, res) => {
     res.render('login');
 });
